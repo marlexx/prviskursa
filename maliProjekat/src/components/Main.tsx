@@ -3,7 +3,7 @@ import React from "react";
 function Main() {
     return (
         <div>
-            <h1 className="main--title">Fun facts about react</h1>
+            <h1 className="main--title">Fun facts about Staša</h1>
             <div className="main--content">
                 <svg xmlns="http://www.w3.org/2000/svg" width="10" height="161" viewBox="0 0 10 161" fill="none" className="main--bullets">
                     <circle cx="4.80333" cy="4.80333" r="4.80333" fill="#61DAFB" />
@@ -14,7 +14,7 @@ function Main() {
                 </svg>
                 <ul className="main--li">
                     <li>blabla</li>
-                    <li>stasa</li>
+                    <li>staša</li>
                     <li>{'<'}3</li>
                     <li>kurac</li>
                     <li>kukica</li>
