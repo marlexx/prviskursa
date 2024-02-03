@@ -3,8 +3,25 @@
 }
 
 body {
+  padding: 0;
   margin: 0;
+  height: 100vh;
   font-family: Inter, sans-serif;
+  background-image: url(/react-logo-half.png);
+  background-repeat: no-repeat;
+  background-size: 20vh;
+  background-position-x: right;
+  background-position-y: 20vh;
+}
+
+.light {
+  background-color: azure;
+  color: #21222A;
+}
+
+.navlight{
+  background-color: azure;
+  color: #2B283A;
 }
 
 nav {
@@ -20,15 +37,27 @@ nav {
   margin: 0;
 }
 
-.nav--logo_text {
+.nav--logo_text-light {
+  margin-right: auto;
+  color: #072129;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.nav--logo_text-dark {
   margin-right: auto;
   color: #61DAFB;
   font-weight: 700;
   font-size: 22px;
 }
 
-.nav--title {
+.nav--title-dark {
   color: #DEEBF8;
+  font-weight: 600;
+}
+
+.nav--title-light {
+  color: #072129;
   font-weight: 600;
 }
 
@@ -37,14 +66,24 @@ nav {
   margin-right: 7px;
 }
 
+.main {
+  width: 100vw;
+  height: 100vh;
+}
+
+.main.light {
+  mix-blend-mode:difference;
+}
+
 .main--title {
   font-size: 39.06px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   letter-spacing: -1.953px;
-  margin-left: 27px;
-  margin-top: 57px;
+  padding-left: 27px;
+  padding-top: 57px;
+  margin: 0;
 }
 
 .main--content {
@@ -59,16 +98,78 @@ nav {
 }
 
 .main--li > li { 
-  list-style-type: none;
+  list-style-type: disc;
   margin-top: 17px;
   font-size: 16px;
   font-weight: 400;
 }
+.main--li > li::marker {
+  color: #61DAFB;
+  font-size: 1.4rem;
+}
 
-.main--watermark {
-  z-index: 1;
-  position: absolute;
-  right: 0;
-  width: auto;
-  height: 50vh;
+.main--li.light > li::marker {
+  color: #0306b1;
+  font-size: 1.4rem;
+}
+
+.toggler {
+  display: flex;
+  align-items: center;
+}
+
+.toggler p {
+  font-size: 0.625rem;
+  font-weight: 600;
+}
+
+.toggler--slider {
+  width: 25px;
+  height: 13px;
+  background-color: #2B283A;
+  border-radius: 2rem;
+  margin-inline: 7px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid black;
+  box-sizing: content-box;
+}
+
+nav.dark .toggler--slider {
+  border-color: white;
+  background-color: #F5F5F5;
+}
+
+.toggler--slider--circle {
+  height: 13px;
+  width: 13px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+nav.dark .toggler--slider--circle {
+  background-color: black;
+}
+
+.toggler--dark{
+  color: #6e6a85;
+  margin-left: 1vw;
+}
+
+nav.dark .toggler--light {
+  color: #918E9B;
+}
+
+.toggler--light {
+  color: #D5D4D8;
+}
+
+nav.dark .toggler-dark {
+  color: #FFFFFF;
+}
+
+nav.dark .toggler--slider {
+  justify-content: flex-end;
 }
